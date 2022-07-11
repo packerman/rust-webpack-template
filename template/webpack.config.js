@@ -17,7 +17,10 @@ module.exports = {
     hints: false,
   },
   experiments: {
+    // Support the old WebAssembly like in webpack 4.
     syncWebAssembly: true,
+    // Support the new WebAssembly according to the updated specification (https://github.com/WebAssembly/esm-integration), it makes a WebAssembly module an async module.
+    // asyncWebAssembly: true,
   },
   plugins: [
     new CopyPlugin({
